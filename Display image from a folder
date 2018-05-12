@@ -1,0 +1,9 @@
+$dir = "images/";
+  if ($dh = opendir($dir)) {
+    while (($file = readdir($dh)) !== false) {
+      if($file != "." && $file != "..") {
+        echo "<img src='{$dir}/{$file}' />";
+      }
+    }
+  closedir($dh);
+  }
