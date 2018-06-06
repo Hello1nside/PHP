@@ -65,7 +65,7 @@ foreach ($urls as $url) {
     //echo $title;
 
     $description = $Parser->parseDescription($page);
-    $description = addslashes(trim($description));
+    $description = strip_tags(addslashes(trim($description)));
     //echo $description;
 
     $image = $Parser->parseImage($page);
